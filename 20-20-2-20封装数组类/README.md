@@ -16,3 +16,11 @@ int getLength(){};
 - 3 m_capacity 是容量，被我用作标尺，它等于数组最后一个值。因为setData的方式，使数组未必是连贯的。有值的下标可能是1，3，4。 那么0 ，2 就没有对应的值
 
 所以我在拷贝中，进行判断是否为NULL。
+
+- 4 运算符重载：
+
+```
+int & MyArray::operator[](int index){
+    return this->pAddress[index];
+}
+```

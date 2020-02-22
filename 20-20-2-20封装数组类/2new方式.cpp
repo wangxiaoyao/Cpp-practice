@@ -69,6 +69,9 @@ public:
     int getM_size(){
         return m_size;
     }
+    int operator[](int index){
+        return this->pAddress[index];
+    }
     
 private:
     int m_capacity;
