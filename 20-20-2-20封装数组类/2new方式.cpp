@@ -27,7 +27,7 @@ public:
         m_size = myarray.m_size;
         pAddress = new int[myarray.m_capacity];
         for (int i=0; i<myarray.m_capacity; i++) {
-//            pAddress[i] = myarray.pAddress[i];
+            //            pAddress[i] = myarray.pAddress[i];
             if (myarray.pAddress[i] != NULL) {
                 pAddress[i] = myarray.pAddress[i];
             }
@@ -77,7 +77,7 @@ private:
     int m_capacity;
     int m_size;
     int *pAddress;
-
+    
 };
 
 void  test(){
@@ -94,6 +94,8 @@ void  test(){
     cout<<arr2->getData(4)<<endl;
     arr2->setData(5,5);
     cout<<arr2->getData(5)<<endl;
+    // 注意arr2是一个指针 arr2[5]是不可以的
+    cout << (*arr2)[5] <<endl;
     delete arr1;
     delete arr2;
     
@@ -103,3 +105,4 @@ void  test(){
 int main(void){
     test();
 };
+
